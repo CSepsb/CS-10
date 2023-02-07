@@ -1,0 +1,49 @@
+-----------------------------------
+- Text Content
+-----------------------------------
+WEB TECHNOLOGIES
+
+HTML
+HTML (HypterText Markup Language) is the fundamental building block of the
+Web and defines the content and structure of a web page. Below are some
+common page elements that HTML is used for:
+    Headings
+    Paragraphs
+    Images
+    Links
+    Lists
+
+Learn more about HTML with the w3Schools HTML Tutorial.
+
+CSS
+CSS (Cascading Style Sheets) is used to describe a web page's appearance
+and presentation. Below are some common uses of CSS:
+    Fonts
+    Colors
+    Layout
+    Backgrounds
+
+Learn more about CSS with the w3Schools CSS Tutorial.
+
+JAVASCRIPT
+JavaScript is the programming language of the web and controls the
+functionality and behaviour of a web page. Below are some common uses of
+JavaScript:
+    Add Interactivity to a Web Page
+    Create Web Apps
+    Create Web Games & Animations
+
+A great JavaScript reference is The Modern JavaScript Tutorial.
+
+-----------------------------------
+- Style Notes
+-----------------------------------
+Centered Fixed Width Content (width 600px, top-margin: 25px, padding: 25px (top) 150px (left&right) 50px (bottom))
+Base Font: Verdana
+h1 & h2: Gill Sans font, letter spacing 25px
+h2: top margin 50px
+blue color: #1774bb
+orange color: #f15c2a
+yellow color: #fcb041
+hyperlink: navy color, make bold on hover
+ 
