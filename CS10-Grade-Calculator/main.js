@@ -6,9 +6,7 @@ function bntclick() {
   let script2 = +document.getElementById("scri2").value;
   let projectA = +document.getElementById("proj").value;
 
-  let percentage = (
-    (script1 + programming1 + programming2 + script2 + projectA)/5
-  );
-
-  document.getElementById("output").innerHTML = Math.round(percentage);
+  let percentage =
+    (script1 + programming1 + programming2 + script2 + projectA) / 5.0;
+  document.getElementById("output").innerHTML = Math.round((percentage + Number.EPSILON) * 100) / 100.;
 }
