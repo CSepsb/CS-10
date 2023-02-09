@@ -1,4 +1,3 @@
-// Pizza order
 
 // Add event listener to the button to run the order function
 document.getElementById("button").addEventListener("click", order);

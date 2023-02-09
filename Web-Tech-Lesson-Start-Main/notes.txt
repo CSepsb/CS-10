@@ -45,5 +45,5 @@ h2: top margin 50px
 blue color: #1774bb
 orange color: #f15c2a
 yellow color: #fcb041
-hyperlink: navy color, make bold on hover
+hyperlink: navy color, make bold on hover 
  
