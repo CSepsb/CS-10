@@ -1,0 +1,56 @@
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-variant: small-caps;
+  margin: 40px 0;
+}
+
+img {
+  width: 700px;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.inputs {
+  font-size: 20px;
+}
+
+input {
+  width: 70px;
+  font-size: 20px;
+}
+
+button {
+  background-color: rgb(61, 61, 61);
+  color: white;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  margin-left: 25px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+hr {
+  width: 700px;
+}
+
+.luminance {
+  font-size: 28px;
+}
