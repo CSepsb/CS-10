@@ -1,12 +1,15 @@
 html {
-background-color: grey;
-
-
+  background-image: url(img/desk-g9308565f1_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+  margin-top: 95px;
 }
 body {
-  background-color: white;
+  background-color: rgb(250, 250, 247);
   opacity: 0.8;
-  border-radius: 15px;
+  border-radius: 100px;
   width: 600px;
   margin: 95px auto;
   padding: 25px 50px 50px;
@@ -28,10 +31,10 @@ input {
   height: 25px;
 }
 button:hover {
-  background-color: red;
+  background-color: rgb(216, 75, 56);
 }
 button {
-  background-color: yellow;
+  background-color: rgb(254, 201, 105);
   border-radius: 20px;
   border-color: black;
   border-width: 3px;
@@ -39,5 +42,5 @@ button {
   padding: 5px 15px 5px;
 }
 #output {
-  color: red;
+  color: rgb(216, 75, 56);
 }
