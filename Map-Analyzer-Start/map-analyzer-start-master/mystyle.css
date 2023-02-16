@@ -1,0 +1,80 @@
+/* Style Sheet */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+select {
+  padding: 5px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+}
+
+#container div {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tile {
+  border: 1px solid #333;
+}
+
+.active {
+  border: 3px solid red;
+}
+
+/* Tile Legend */
+#selectTile {
+  display: flex;
+  justify-content: center;
+  margin-block: 50px;
+}
+
+#selectTile div {
+  margin-inline: 10px;
+}
+
+#selectTile div div {
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
+}
+
+/* Text for current tile */
+#currentTile {
+  padding-top: 25px;
+  font-size: 48px;
+}
+
+/* Image Classes */
+.ground {
+  background: url('images/ground.png') no-repeat center;
+  background-size: cover;
+}
+
+.trees {
+  background: url('images/trees.png') no-repeat center;
+  background-size: cover;
+}
+
+.bush {
+  background: url('images/bush.png') no-repeat center;
+  background-size: cover;
+}
+
+.water {
+  background: url('images/water.png') no-repeat center;
+  background-size: cover;
+}
