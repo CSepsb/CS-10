@@ -134,10 +134,9 @@ function level13Solution() {
 
 function level14Solution() {
   // USE CHAINED IF STATEMENT
-  if (column >= 2 && column <= 4) {
+  if (column >= 2 && column <= 4 && row >= 1 && row <= 5) {
     outputEl.innerHTML = "Tree";
-  }
-  if (column >= 7 && column <= 10 && row >= 3 && row <= 5) {
+  } else if (column >= 7 && column <= 10 && row >= 3 && row <= 5) {
     outputEl.innerHTML = "Water";
   } else {
     outputEl.innerHTML = "Sand";
