@@ -1,19 +1,29 @@
 // Get input
-document.getElementById("input").addEventListener("click", btnClicked);
+document.getElementById("search-btn").addEventListener("click", bntClicked);
 
-function btnClicked() {
+function bntClicked() {
   // Get search input
-  let num = document.getElementById("input").value;
+  let num = +document.getElementById("search-in").value;
   // Process
-  if (num > 1) {
+  if ((num) => 1 && num % 2 == 0) {
     document.getElementById(
       "TypeNum"
-    ).innerHTML = `<p>Positive / Negative / Zero : works</p>
-    <p>Even / Odd : works</p>`;
+    ).innerHTML = `<p>Positive / Negative / Zero : Positive</p>
+    <p>Even / Odd : Even</p>`;
+  } else if (num <= -1 && num % 2 == 0) {
+    document.getElementById(
+      "TypeNum"
+    ).innerHTML = `<p>Positive / Negative / Zero : Negative</p>
+  <p>Even / Odd : Even</p>`;
+  } else if (num == 0) {
+    document.getElementById(
+      "TypeNum"
+    ).innerHTML = `<p>Positive / Negative / Zero : Negative</p>
+  <p>Even / Odd : Even</p>`;
   } else {
     document.getElementById(
       "TypeNum"
     ).innerHTML = `<p>Positive / Negative / Zero : ---</p>
-  <p>Even / Odd : ---</p>`;
+    <p>Even / Odd : ---</p>`;
   }
 }
