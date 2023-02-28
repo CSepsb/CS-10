@@ -10,10 +10,10 @@ function bntClicked() {
       "TypeNum"
     ).innerHTML = `<p>Positive / Negative / Zero : Positive</p>
     <p>Even / Odd : Even</p>`;
-  } else if (num <= -1 && num % 2 == 0) {
+  } else if ((num) => 1) {
     document.getElementById(
       "TypeNum"
-    ).innerHTML = `<p>Positive / Negative / Zero : Negative</p>
+    ).innerHTML = `<p>Positive / Negative / Zero : Positive</p>
   <p>Even / Odd : Even</p>`;
   } else if (num == 0) {
     document.getElementById(

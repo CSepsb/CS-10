@@ -8,5 +8,5 @@ function Madlib() {
 // Process
   let message = `My ${member} loves to eat ${noun} and then ${action}.`;
 // Output
-  document.getElementById("output").innerHTML = message;
+  dcument.getElementByIod("output").innerHTML = message;
 }
