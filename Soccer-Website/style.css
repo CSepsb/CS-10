@@ -1,20 +1,59 @@
 html {
-  background-image: url(img/al-janoub-al-wakrah-stadium-qatar-zha170519-7.webp);
+  padding-bottom: 10px;
+  padding-top: 10px,;
+  margin: 100px auto;
+  background-color: #bfbfbf;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-body {
+.nav {
   text-align: center;
+}
+
+.center {
+  text-align: center;
+  border-radius: 50px;
+  width: 600px;
+}
+
+.ball {
+  width: 200px;
+  float: left;
+}
+
+.ifab{width: 200px;
+  float: right;}
+
+.bicycle {
+  margin-top: 40px;
+  text-align: center;
+  width: 600px;
+  border-radius: 15px
+}
+.about {
   background-color: white;
   opacity: 1;
-  border-radius: 15px;
+  border-radius: 30px;
   width: 600px;
   margin: 25px auto;
   padding: 25px 150px 50px;
 }
-.Pelé {
+
+.home {
+  background-color: white;
+  opacity: 1;
+  border-radius: 30px;
+  width: 600px;
   margin: 25px auto;
-  border-radius: 50px;
-  width:540px
+  padding: 25px 150px 50px;
+}
+
+.quiz {
+  background-color: white;
+  opacity: 1;
+  border-radius: 30px;
+  width: 600px;
+  margin: 25px auto;
+  padding: 25px 150px 50px;
 }
