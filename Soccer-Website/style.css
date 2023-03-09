@@ -2,24 +2,17 @@ html {
   padding-bottom: 10px;
   padding-top: 10px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   background-image: url(img/image\ \(1\)-modified.jpg);
 }
 
 h1 {
+  height: 65px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
-  background: -webkit-linear-gradient(#000000, #b9b3b3fb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.image {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-.nav {
-  text-align: center;
+  background: -webkit-linear-gradient(#464444, #fffffffb);
+  color: white;
 }
 
 .center {
@@ -45,6 +38,7 @@ h1 {
   border-radius: 15px;
 }
 .about {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   opacity: 1;
   border-radius: 30px;
@@ -54,6 +48,7 @@ h1 {
 }
 
 .home {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   opacity: 1;
   border-radius: 30px;
@@ -63,6 +58,7 @@ h1 {
 }
 
 .quiz {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   opacity: 1;
   border-radius: 30px;
@@ -70,3 +66,21 @@ h1 {
   margin: 25px auto;
   padding: 25px 150px 50px;
 }
+
+button:hover {
+  background-color: rgb(247, 237, 99);
+}
+button {
+  background-color: #fffffffb;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  padding: 5px 15px 5px;
+}
+
+.Pelé{ 
+  text-align: center; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: black;}

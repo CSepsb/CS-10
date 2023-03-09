@@ -1,2 +1,20 @@
-//Program TItle
-console.log(`hi`);
+  // Soccer Website Quiz
+document.getElementById("button").addEventListener("click", bntclick);
+function bntclick() {
+  // Get search input
+  let name = document.getElementById("1").value.toLowerCase();
+  console.log(name);
+  let script1 = +document.getElementById("scri1").value;
+  let programming1 = +document.getElementById("pro1").value;
+  let programming2 = +document.getElementById("pro2").value;
+  let script2 = +document.getElementById("scri2").value;
+  let projectA = +document.getElementById("proj").value;
+
+  //Process
+  let percentage =
+    (script1 + programming1 + programming2 + script2 + projectA) / 5.0;
+
+  //Output
+  document.getElementById("output").innerHTML =
+    Math.round((percentage + Number.EPSILON) * 100) / 100;
+}
