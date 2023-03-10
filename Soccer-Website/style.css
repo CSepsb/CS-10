@@ -15,6 +15,13 @@ h1 {
   color: white;
 }
 
+nav:hover{text-decoration: underline;}
+
+nav{
+  color: white;
+  text-decoration: none;
+  text-align: center;}
+
 .center {
   text-align: center;
   border-radius: 50px;
