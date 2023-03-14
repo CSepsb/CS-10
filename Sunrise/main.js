@@ -5,29 +5,21 @@ let ctx = cnv.getContext("2d");
 cnv.width = 800;
 cnv.height = 600;
 
-// rectagle
-ctx.strokeStyle = "purple";
-ctx.strokeRect(50, 20, 150, 50);
+// sky
+ctx.fillStyle = "#3131e7";
+ctx.fillRect(0, 0, 900, 900);
 
-// square
-ctx.fillStyle = "rgb(0, 225, 0)";
-ctx.fillRect(225, 50, 50, 50);
+// sun
+ctx.beginPath();
+ctx.arc(400, 400, 50, 1, 2 * Math.PI);
+ctx.fillStyle = '#e60000';
+ctx.fill();
 
-// filled text
-ctx.font = "42px Comic Sans MS";
-ctx.fillStyle = "red";
-ctx.fillText(`Hello Canvas`, 350, 50);
+// grass
+ctx.fillStyle = "#208000";
+ctx.fillRect(0, 400, 900, 900);
 
-// outline text
-ctx.font = "30px Arial";
-ctx.strokeStyle = "blue";
-ctx.strokeText("Hello Canvas", 350, 150);
-
-// line
-ctx.lineWidth = 4;
-ctx.strokeStyle = "orange";
-ctx.beingPath();
-ctx.moveTo(500, 200);
-ctz.lineTo(700, 150);
-ctz.lineTo(600, 100);
-ctx.stroke();
+// image
+let htmlImg=document.getElementById("cloud");
+ctx.drawImage(htmlImg, 400 ,400);
+ctx.drawImage(htmlImg, 400 ,400);
