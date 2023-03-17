@@ -1,0 +1,13 @@
+html {
+  text-align: center;
+  background-color: rgba(129, 129, 129, 0.884);
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  border: 7px solid rgb(0, 0, 0);
+  width: 450px;
+  margin: 50px auto;
+  background-color: rgb(255, 255, 255);
+  padding: 25px 75px;
+  border-radius: 10px;
+}
