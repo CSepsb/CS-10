@@ -62,7 +62,7 @@ function fishBtnClicked() {
       document.getElementById("result-img").src = "img/Raw-Salmon.png";
       numSalmon++;
       document.getElementById("num-salmon").innerHTML = numSalmon;
-    } else if (ranNum < 0.7) {
+    } else if (ranNum < 0.75) {
       document.getElementById("result-img").src = "img/Tropical-Fish.png";
       NumTropical++;
       document.getElementById("num-tropical").innerHTML = NumTropical;

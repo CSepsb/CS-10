@@ -1,13 +1,41 @@
 html {
-  text-align: center;
-  background-color: rgba(129, 129, 129, 0.884);
+  /* background-color: rgba(129, 129, 129, 0.884); */
+  background-image: url(img/996039.jpg);
+  background-attachment: fixed;
+  background-position: center;
 }
 body {
   font-family: "Times New Roman", Times, serif;
   border: 7px solid rgb(0, 0, 0);
-  width: 450px;
+  width: 500px;
+  height: 630px;
   margin: 50px auto;
   background-color: rgb(255, 255, 255);
   padding: 25px 75px;
   border-radius: 10px;
+}
+
+img {
+  margin-top: 20px;
+  width: 400px;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  background-color: white;
+}
+img:hover {
+  width: 410px;
+  transition: width 0.1s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  width: 77%;
 }
