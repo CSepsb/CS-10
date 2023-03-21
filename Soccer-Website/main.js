@@ -1,37 +1,16 @@
-//   // Soccer Website Quiz
-// document.getElementById("button").addEventListener("click", bntclick);
-// function bntclick() {
-//   // Get search input
-//   let name = document.getElementById("1").value.toLowerCase();
-//   console.log(name);
-//   let script1 = +document.getElementById("scri1").value;
-//   let programming1 = +document.getElementById("pro1").value;
-//   let programming2 = +document.getElementById("pro2").value;
-//   let script2 = +document.getElementById("scri2").value;
-//   let projectA = +document.getElementById("proj").value;
-
-//   //Process
-//   let percentage =
-//     (script1 + programming1 + programming2 + script2 + projectA) / 5.0;
-
-//   //Output
-//   document.getElementById("output").innerHTML =
-//     Math.round((percentage + Number.EPSILON) * 100) / 100;
-// }
-
-let AnwEl = document.getElementById("Answer");
+let Results = document.getElementById("results");
 
 let Answer = 0;
 
-document.getElementById("btn").addEventListener("click", AwnSearch);
+document.getElementById("btn").addEventListener("click", btnClicked);
 
-function AwnSearch() {
+function btnClicked() {
     let input1 = document.getElementById("text1").value
 
-if (input1 === "2007") {
+if (input1 === 90) {
     Answer++;
     document.getElementById("1").innerHTML = "Correct";
-    AnwEl.innerHTML = Answer;
+    Results.innerHTML = Answer;
 } else {
     document.getElementById("1").innerHTML = "Incorrect";
 }
