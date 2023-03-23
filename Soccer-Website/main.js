@@ -5,92 +5,69 @@ let Answer = 0;
 document.getElementById("btn").addEventListener("click", btnClicked);
 
 function btnClicked() {
-    let input1 = document.getElementById("text1").value
+  let input1 = document.getElementById("input1").value;
 
-if (input1 === 90) {
+  if (input1 === 90) {
     Answer++;
     document.getElementById("1").innerHTML = "Correct";
     Results.innerHTML = Answer;
-} else {
+  } else {
     document.getElementById("1").innerHTML = "Incorrect";
-}
+  }
 
-let input2 = document.getElementById("text2").value
-input2 = input2.toLowerCase();
+  let input2 = document.getElementById("input2").value;
 
-if (input2 === "spy") {
+  if (input2 === 4) {
     Answer++;
     document.getElementById("2").innerHTML = "Correct";
-    AnwEl.innerHTML = Answer;
-} else if (input2 === "pyro") {
+    Results.innerHTML = Answer;
+  } else {
     document.getElementById("2").innerHTML = "Incorrect";
-} else if (input2 ==="scout"){
-    document.getElementById("2").innerHTML = "Really Close";
-} else if (input2 === "soldier") {
-    document.getElementById("2").innerHTML = "Youre almost there";
-} else if (input2 === "demoman") {
-    document.getElementById("2").innerHTML = "Pretty close";
-} else if (input2 === "heavy"){
-    document.getElementById("2").innerHTML = "Oh So slose";
-} else if (input2 === "engineer") {
-    document.getElementById("2").innerHTML = "Barely worng";
-} else if (input2 === "medic") {
-    document.getElementById("2").innerHTML = "Comne on";
-} else if (input2 === "sniper") {
-    document.getElementById("2").innerHTML = "Really really close";
-} else {
-    document.getElementById("2").innerHTML = "Wrong type of class";
-}
+  }
 
-let input3 = document.getElementById("text3").value
-input3 = input3.toLowerCase();
+  let input3 = document.getElementById("input3").value;
 
-if (input3 === "pyro") {
+  if (input3 === 22) {
     Answer++;
     document.getElementById("3").innerHTML = "Correct";
-    AnwEl.innerHTML = Answer;
-} else if (input3 === "spy") {
+    Results.innerHTML = Answer;
+  } else {
     document.getElementById("3").innerHTML = "Incorrect";
-} else if (input3 ==="scout"){
-    document.getElementById("3").innerHTML = "Incorrect";
-} else if (input3 === "soldier") {
-    document.getElementById("3").innerHTML = "Incorrect";
-} else if (input3 === "demoman") {
-    document.getElementById("3").innerHTML = "Incorrect";
-} else if (input3 === "heavy"){
-    document.getElementById("3").innerHTML = "Incorrect";
-} else if (input3 === "engineer") {
-    document.getElementById("3").innerHTML = "Incorrect";
-} else if (input3 === "medic") {
-    document.getElementById("3").innerHTML = "Incorrect";
-} else if (input3 === "sniper") {
-    document.getElementById("3").innerHTML= "Incorrect";
-} else {
-    document.getElementById("3").innerHTML = "that's not a Class";
-}
+  }
 
+  let input4 = document.getElementById("input4").value;
+  input4 = input4.toLowerCase();
 
-let input4 = document.getElementById("text4").value
-
-if (input4 === "9") {
+  if (input4 === "england") {
     Answer++;
     document.getElementById("4").innerHTML = "Correct";
     AnwEl.innerHTML = Answer;
-} else {
+  } else {
     document.getElementById("4").innerHTML = "Incorrect";
-}
+  }
 
+  let input5 = document.getElementById("input5").value;
+  input4 = input4.toLowerCase();
 
-if (Answer === "1") {
-    document.getElementById("FeedBack").innerHTML = "1/4 25%";
-} else if (Answer === "2") {
-    document.getElementById("FeedBack").innerHTML = "2/4 50%";
-} else if (Answer === "3") {
-    document.getElementById("FeedBack").innerHTML = "2/4 75%";
-} else if (Answer === "4") {
-    document.getElementById("FeedBack").innerHTML = "4/4 100%";
-} else if (Answer === "0") {
-    document.getElementById("FeedBack").innerHTML = "0/4 0%";
-}
+  if (input4 === "kickoff") {
+    Answer++;
+    document.getElementById("5").innerHTML = "Correct";
+    AnwEl.innerHTML = Answer;
+  } else {
+    document.getElementById("5").innerHTML = "Incorrect";
+  }
 
+  if (Answer === "1") {
+    document.getElementById("results").innerHTML = "1/5 20%";
+  } else if (Answer === "2") {
+    document.getElementById("results").innerHTML = "2/5 40%";
+  } else if (Answer === "3") {
+    document.getElementById("results").innerHTML = "2/5 60%";
+  } else if (Answer === "4") {
+    document.getElementById("results").innerHTML = "4/5 80%";
+  } else if (Answer === "5") {
+    document.getElementById("results").innerHTML = "5/5 100%";
+  } else if (Answer === "0") {
+    document.getElementById("results").innerHTML = "0/5 0%";
+  }
 }
