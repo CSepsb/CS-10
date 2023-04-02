@@ -4,8 +4,7 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-image: url(img/image\ \(1\)-modified.jpg);
-
+  background-image: url(img/image\\(1\)-modified.jpg);
 }
 
 h1 {
@@ -44,16 +43,17 @@ h1 {
   background-color: #ffffff;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom:35px ;
+  margin-bottom: 35px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.portrait{text-align: center;
+.portrait {
+  text-align: center;
   border-radius: 50px;
   width: 700px;
   background-color: #ffffff;
   padding: 20px;
-  margin-bottom:35px ;
+  margin-bottom: 35px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .ball {
@@ -102,7 +102,6 @@ h1 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-
 .quiz {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ffffff;
@@ -128,6 +127,7 @@ button {
   cursor: pointer;
 }
 
-.Pelé{ 
-  text-align: center; 
-  font-family: Arial, Helvetica, sans}
+.Pelé {
+  text-align: center;
+  font-family: Arial, Helvetica, sans;
+}
