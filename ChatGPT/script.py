@@ -1,7 +1,5 @@
 import openai
 
-# e-commers themplate
-
 # Set up OpenAI API key
 api_key = "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"
 openai.api_key = api_key

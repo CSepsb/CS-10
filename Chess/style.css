@@ -1,6 +1,6 @@
 .board {
   width: 400px;
-  margin: auto;
+  margin: auto
 }
 
 .info {
@@ -13,8 +13,4 @@
   overflow-y: scroll;
 }
 
-html {
-  text-align: center;
-  margin-top: 75px;
-}
-.info{margin-top: 25px;}
+html{text-align: center;}
