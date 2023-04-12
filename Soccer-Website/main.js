@@ -6,7 +6,7 @@ function btnClicked() {
   let input1 = document.getElementById("input1").value;
 
   if (input1 === "90") {
-    Answer + 1;
+    Answer += 1;
     document.getElementById("1").innerHTML = "Correct";
   } else {
     document.getElementById("1").innerHTML = "Incorrect";
@@ -15,7 +15,7 @@ function btnClicked() {
   let input2 = document.getElementById("input2").value;
 
   if (input2 === "2") {
-    Answer + 1;
+    Answer += 1;
     document.getElementById("2").innerHTML = "Correct";
   } else {
     document.getElementById("2").innerHTML = "Incorrect";
@@ -24,7 +24,7 @@ function btnClicked() {
   let input3 = document.getElementById("input3").value;
 
   if (input3 === "22") {
-    Answer + 1;
+    Answer += 1;
     document.getElementById("3").innerHTML = "Correct";
   } else {
     document.getElementById("3").innerHTML = "Incorrect";
@@ -34,7 +34,7 @@ function btnClicked() {
   input4 = input4.toLowerCase();
 
   if (input4 === "england") {
-    Answer + 1;
+    Answer += 1;
     document.getElementById("4").innerHTML = "Correct";
   } else {
     document.getElementById("4").innerHTML = "Incorrect";
@@ -44,7 +44,7 @@ function btnClicked() {
   input5 = input5.toLowerCase();
 
   if (input5 === "kickoff") {
-    Answer + 1;
+    Answer += 1;
     document.getElementById("5").innerHTML = "Correct";
   } else {
     document.getElementById("5").innerHTML = "Incorrect";
