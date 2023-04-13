@@ -1,7 +1,10 @@
 document.getElementById("btn").addEventListener("click", bntclick);
+
 function bntclick() {
+  // Variables
   let ranNum = Math.random();
   let input = document.getElementById("search-in").value;
+  // Answers
   if (input == "") {
     alert("Please ask a question...");
   } else if (input === "Does a magic 8 ball actually work?") {
