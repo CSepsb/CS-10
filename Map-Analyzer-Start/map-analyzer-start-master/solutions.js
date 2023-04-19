@@ -107,7 +107,7 @@ function level11Solution() {
     outputEl.innerHTML = "Water";
   } else if (column <= 5 && row >= 4) {
     outputEl.innerHTML = "Sand";
-  } else if (column >= 6 && row <= 3) {
+  } else if (column >= 6 && row >= 3) {
     outputEl.innerHTML = "Trees";
   } else {
     outputEl.innerHTML = "Hills";
