@@ -86,12 +86,22 @@ function update() {
   ) {
     gameOver = true;
     alert("Game Over");
+    document.getElementById(
+      "title"
+    ).innerHTML = `<a id="title" href="http://127.0.0.1:5500/Snake/">
+    <h1>Click To Reset</h1>
+  </a>`;
   }
 
   for (let i = 0; i < snakeBody.length; i++) {
     if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
       gameOver = true;
       alert("Game Over");
+      document.getElementById(
+        "title"
+      ).innerHTML = `<a id="title" href="http://127.0.0.1:5500/Snake/">
+      <h1>Click To Reset</h1>
+    </a>`;
     }
   }
 }
@@ -113,6 +123,16 @@ function changeDirection(e) {
 }
 
 function placeFood() {
-  foodX = Math.floor(Math.random() * colon) * blockSize;
-  foodY = Math.floor(Math.random() * rows) * blockSize;
+  let foodIsOnSnake = true;
+  while (foodIsOnSnake) {
+    foodX = Math.floor(Math.random() * colon) * blockSize;
+    foodY = Math.floor(Math.random() * rows) * blockSize;
+    foodIsOnSnake = false;
+    for (let i = 0; i < snakeBody.length; i++) {
+      if (snakeBody[i][0] == foodX && snakeBody[i][1] == foodY) {
+        foodIsOnSnake = true;
+        break;
+      }
+    }
+  }
 }
