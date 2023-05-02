@@ -73,7 +73,7 @@ function level7Solution() {
 
 function level8Solution() {
   // USE BINARY IF STATEMENT
-  if (column == 2 || row == 5) {
+  if (column === 2 || row === 5) {
     outputEl.innerHTML = "Tree";
   } else {
     outputEl.innerHTML = "Sand";
@@ -116,10 +116,10 @@ function level11Solution() {
 
 function level12Solution() {
   // USE BINARY IF STATEMENT
-  if ((column <= 5 && row <= 4) || (column >= 6 && row >= 5)) {
-    outputEl.innerHTML = "Water";
-  } else {
+  if (column >= 4 && row <= 5) {
     outputEl.innerHTML = "Sand";
+  } else {
+    outputEl.innerHTML = "Water";
   }
 }
 
