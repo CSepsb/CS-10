@@ -101,7 +101,7 @@ function gameOver() {
   if (distance > best) {
     best = distance;
   }
-  setTimeout(reset, 2000);
+  setTimeout(reset, 1500);
 }
 
 function drawGame() {
