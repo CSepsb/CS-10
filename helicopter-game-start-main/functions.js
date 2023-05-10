@@ -95,6 +95,7 @@ function checkCollisions() {
 }
 
 function gameOver() {
+  wallSpeed = -3
   explosion.play();
   state = "gameover";
   if (distance > best) {
