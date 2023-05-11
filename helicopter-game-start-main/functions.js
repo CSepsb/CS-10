@@ -4,15 +4,25 @@
 function drawStart() {
   drawMainComponents();
 
-  // Start Text
+  // Start Text For KEYS
   ctx.font = "40px Consolas";
   ctx.fillStyle = "lightblue";
-  ctx.fillText("CLICK TO START", 350, 285);
+  ctx.fillText("PRESS TO START", 350, 285);
 
   ctx.font = "25px Consolas";
-  ctx.fillText("CLICK AND HOLD LEFT MOUSE BUTTON TO GO UP", 100, 450);
-  ctx.fillText("RELEASE TO GO DOWN", 415, 480);
+  ctx.fillText("PRESS AND HOLD ANY KEY TO GO UP", 180, 450);
+  ctx.fillText("RELEASE TO GO DOWN", 360, 480);
 }
+
+// Start Text for mouse
+//   ctx.font = "40px Consolas";
+//   ctx.fillStyle = "lightblue";
+//   ctx.fillText("CLICK TO START", 350, 285);
+
+//   ctx.font = "25px Consolas";
+//   ctx.fillText("CLICK AND HOLD LEFT MOUSE BUTTON TO GO UP", 100, 450);
+//   ctx.fillText("RELEASE TO GO DOWN", 415, 480);
+// }
 
 // Draw Game Elements
 function runGame() {
@@ -95,7 +105,7 @@ function checkCollisions() {
 }
 
 function gameOver() {
-  wallSpeed = -3
+  wallSpeed = -3;
   explosion.play();
   state = "gameover";
   if (distance > best) {

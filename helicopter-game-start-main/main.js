@@ -22,7 +22,7 @@ let distance = 0;
 
 let best = 0;
 
-let wallSpeed = -3
+let wallSpeed = -3;
 
 let state;
 let heli;
@@ -44,11 +44,11 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-// Event
-document.addEventListener("mousedown", mousedownHandler);
-document.addEventListener("mouseup", mouseupHandler);
+// Event for keys
+document.addEventListener("keydown", keydownHandler);
+document.addEventListener("keyup", keyupHandler);
 
-function mousedownHandler() {
+function keydownHandler(event) {
   // heli sound
   propeller.CurrentTime = 0;
   propeller.play();
@@ -61,7 +61,29 @@ function mousedownHandler() {
   }
 }
 
-function mouseupHandler() {
+function keyupHandler() {
   mouseIsPressed = false;
   propeller.pause();
 }
+
+// Event for mouse
+// document.addEventListener("mousedown", mousedownHandler);
+// document.addEventListener("mouseup", mouseupHandler);
+
+// function mousedownHandler() {
+//   // heli sound
+//   propeller.CurrentTime = 0;
+//   propeller.play();
+
+//   mouseIsPressed = true;
+
+//   // Start Game on Mousedown
+//   if (state === "start") {
+//     state = "gameon";
+//   }
+// }
+
+// function mouseupHandler() {
+//   mouseIsPressed = false;
+//   propeller.pause();
+// }
