@@ -135,7 +135,7 @@ function drawGameOver() {
   // Game Over Text
   ctx.font = "40px Consolas";
   ctx.fillStyle = "lightblue";
-  ctx.fillText("GAME OVER", 350, 285);
+  ctx.fillText("GAME OVER", heli.x + heli.w / 2 + 100, heli.y + heli.h / 2);
 }
 
 // Helper Functions
