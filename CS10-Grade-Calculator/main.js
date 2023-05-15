@@ -7,11 +7,14 @@ function bntclick() {
   let programming2 = +document.getElementById("pro2").value;
   let script2 = +document.getElementById("scri2").value;
   let projectA = +document.getElementById("proj").value;
-  
+
   //Process
   let percentage =
     (script1 + programming1 + programming2 + script2 + projectA) / 5.0;
-  
-    //Output
-    document.getElementById("output").innerHTML = Math.round((percentage + Number.EPSILON) * 100) / 100;
+
+  //Output
+  document.getElementById("output").innerHTML =
+    Math.round((percentage + Number.EPSILON) * 100) / 100;
+  document.getElementById("title").innerHTML = `<a id="title" href="index.html">
+  Reset </a>`;
 }
