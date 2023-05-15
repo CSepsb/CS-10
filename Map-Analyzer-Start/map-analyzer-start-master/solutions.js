@@ -116,10 +116,10 @@ function level11Solution() {
 
 function level12Solution() {
   // USE BINARY IF STATEMENT
-  if (column >= 4 && row <= 5) {
-    outputEl.innerHTML = "Sand";
-  } else {
+  if (column <= 5 && row <= 4 || column >= 6 && row >= 5 ) {
     outputEl.innerHTML = "Water";
+  } else {
+    outputEl.innerHTML = "Sand";
   }
 }
 
