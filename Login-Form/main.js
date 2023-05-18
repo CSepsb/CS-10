@@ -9,9 +9,9 @@ function btnClicked() {
   let password = "1234";
 
   // Test the password strength
-  if (user_username != user) {
+  if (user_username !== user) {
     document.getElementById("output").innerHTML = `<h2>Invalid Username</h2>`;
-  } else if (user_password != password) {
+  } else if (user_password !== password) {
     document.getElementById("output").innerHTML = `<h2>Invalid Password</h2>`;
   } else if (user_username == user && user_password == password) {
     document.getElementById("output").innerHTML = `<h2>Login Successful</h2>`;

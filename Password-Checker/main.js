@@ -10,7 +10,7 @@ function btnClicked() {
   let code3 = +document.getElementById("code3-in").value;
 
   // Check Passcode
-  if (code1 === 10 && (code2 === 20 || code3 === 30)) {
+  if (code1 === 10 && code2 === 20 && code3 === 30) {
     document.getElementById("status").style.backgroundColor = "green";
   } else {
     document.getElementById("status").style.backgroundColor = "red";
