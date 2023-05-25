@@ -33,40 +33,16 @@ ctx.fillRect(170, 40, 110, 60);
 ctx.fillRect(190, 20, 70, 20);
 // Windows Big Building
 ctx.fillStyle = "white";
-ctx.fillRect(171, 120, 10, 500);
-ctx.fillRect(196, 120, 10, 500);
-ctx.fillRect(221, 120, 10, 500);
-ctx.fillRect(246, 120, 10, 500);
-ctx.fillRect(271, 120, 10, 500);
+for (let windowBig = 171; windowBig <= 271; windowBig += 25) {
+  ctx.fillRect(windowBig, 120, 10, 500);
+}
 // Sqare Windows Small Building
-ctx.fillRect(33, 210, 10, 10);
-ctx.fillRect(57, 210, 10, 10);
-ctx.fillRect(83, 210, 10, 10);
-ctx.fillRect(107, 210, 10, 10);
-ctx.fillRect(33, 234, 10, 10);
-ctx.fillRect(57, 234, 10, 10);
-ctx.fillRect(83, 234, 10, 10);
-ctx.fillRect(107, 234, 10, 10);
-ctx.fillRect(33, 258, 10, 10);
-ctx.fillRect(57, 258, 10, 10);
-ctx.fillRect(83, 258, 10, 10);
-ctx.fillRect(107, 258, 10, 10);
-ctx.fillRect(33, 282, 10, 10);
-ctx.fillRect(57, 282, 10, 10);
-ctx.fillRect(83, 282, 10, 10);
-ctx.fillRect(107, 282, 10, 10);
-ctx.fillRect(33, 306, 10, 10);
-ctx.fillRect(57, 306, 10, 10);
-ctx.fillRect(83, 306, 10, 10);
-ctx.fillRect(107, 306, 10, 10);
-ctx.fillRect(33, 330, 10, 10);
-ctx.fillRect(57, 330, 10, 10);
-ctx.fillRect(83, 330, 10, 10);
-ctx.fillRect(107, 330, 10, 10);
+for (let windowRow = 210; windowRow <= 330; windowRow += 24) {
+  for (let windowCol = 33; windowCol <= 107; windowCol += 24) {
+    ctx.fillRect(windowCol, windowRow, 10, 10);
+  }
+}
 // Windows Small Building
-ctx.fillRect(21, 370, 110, 23);
-ctx.fillRect(21, 415, 110, 23);
-ctx.fillRect(21, 460, 110, 23);
-ctx.fillRect(21, 505, 110, 23);
-ctx.fillRect(21, 550, 110, 23);
-ctx.fillRect(21, 595, 110, 23);
+for (let windowSmall = 370; windowSmall <= 595; windowSmall += 45) {
+  ctx.fillRect(21, windowSmall, 110, 23);
+}

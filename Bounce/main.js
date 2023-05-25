@@ -15,6 +15,8 @@ let speed = 3;
 let directionB = 1;
 let directionG = 1;
 let directionO = 1;
+let orangeXS = speed * directionO;
+let orangeYS = speed * directionO;
 
 // Objects
 
@@ -49,7 +51,15 @@ function draw() {
     greenY += speed * directionG;
   }
   // Move Orange
+  orangeX += orangeXS;
+  orangeY += orangeYS;
 
+  if (orangeX > cnv.width - 50 || orangeX < 0) {
+    orangeXS = -orangeXS;
+  }
+  if (orangeY > cnv.height - 50 || orangeY < 0) {
+    orangeYS = -orangeYS;
+  }
   // Request the next frame
   requestAnimationFrame(draw);
 }

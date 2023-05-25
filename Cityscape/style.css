@@ -1,7 +1,4 @@
 body {
   text-align: center;
-}
-
-canvas {
-  border: 1px solid grey;
+  margin-top: 100px;
 }
