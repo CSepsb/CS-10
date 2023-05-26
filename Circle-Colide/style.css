@@ -1,0 +1,8 @@
+html {
+    text-align: center;
+  }
+  canvas {
+    margin-top: 100px;
+    border: black 3px solid;
+  }
+  
