@@ -12,7 +12,18 @@ const orangeRadius = 50;
 let orangeX = 350;
 let orangeY = 350;
 
-// Objects
+// Functions
+function getRandomPosition() {
+  const minX = orangeRadius;
+  const maxX = cnv.width - orangeRadius;
+  const minY = orangeRadius;
+  const maxY = cnv.height - orangeRadius;
+
+  const x = Math.random() * (maxX - minX) + minX;
+  const y = Math.random() * (maxY - minY) + minY;
+
+  return { x, y };
+}
 
 function draw() {
   // Clear the canvas
@@ -33,19 +44,20 @@ function draw() {
   // Check for collision between the two circles
   const dx = orangeX - mouseX;
   const dy = orangeY - mouseY;
-  const distance = Math.sqrt(dx*dx + dy*dy);
+  const distance = Math.sqrt(dx * dx + dy * dy);
   if (distance < blueRadius + orangeRadius) {
-     // Teleport the orange circle to a random location on the canvas
-     orangeX = Math.random() * cnv.width;
-     orangeY = Math.random() * cnv.height;
+    // Teleport the orange circle to a random location inside the canvas
+    const newPosition = getRandomPosition();
+    orangeX = newPosition.x;
+    orangeY = newPosition.y;
   }
-  
+
   // Request the next animation frame
   requestAnimationFrame(draw);
 }
 
 // Track the mouse position relative to the canvas
-cnv.addEventListener("mousemove", function(event) {
+cnv.addEventListener("mousemove", function (event) {
   const rect = cnv.getBoundingClientRect();
   mouseX = event.clientX - rect.left;
   mouseY = event.clientY - rect.top;
@@ -53,4 +65,3 @@ cnv.addEventListener("mousemove", function(event) {
 
 // Program Loop
 requestAnimationFrame(draw);
-``

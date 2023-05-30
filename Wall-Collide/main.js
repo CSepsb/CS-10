@@ -1,6 +1,4 @@
 // Variables
-let startingX = 175;
-let startingY = 350;
 let playerX = 175;
 let playerY = 350;
 let rightPressed = false;
@@ -40,25 +38,34 @@ function keyUpHandler(event) {
 
 // Move
 function move() {
-  if (rightPressed === true) {
+  if (rightPressed === true && playerX < 650) {
     playerX += 3;
-  } else if (leftPressed === true) {
+  } else if (leftPressed === true && playerX > 0) {
     playerX -= 3;
   }
 
-  if (downPressed === true) {
+  if (downPressed === true && playerY < 650) {
     playerY += 3;
-  } else if (upPressed === true) {
+  } else if (upPressed === true && playerY > 0) {
     playerY -= 3;
   }
 }
 
-// Boundaries
-if (playerX >= 700 || playerY >= 700) {
-  playerX = 700;
-  playerY = 700;
+// Check collision
+function checkCollision() {
+  if (
+    playerX < 375 &&
+    playerX + 50 > 325 &&
+    playerY < 500 &&
+    playerY + 50 > 250
+  ) {
+    // Teleport to starting location
+    playerX = 175;
+    playerY = 350;
+  }
 }
-requestAnimationFrame(draw);
+
+// Draw
 function draw() {
   // Canvas
   let cnv = document.getElementById("my-canvas");
@@ -66,14 +73,35 @@ function draw() {
   cnv.width = 700;
   cnv.height = 700;
 
-  //Move
+  // Move
   move();
+
+  // Check collision
+  checkCollision();
+
+  // Boundaries
+  if (playerX >= 650) {
+    playerX = 650;
+  } else if (playerX <= 0) {
+    playerX = 0;
+  }
+
+  if (playerY >= 650) {
+    playerY = 650;
+  } else if (playerY <= 0) {
+    playerY = 0;
+  }
+
   // Wall
   ctx.fillStyle = "grey";
   ctx.fillRect(325, 250, 50, 250);
-  // Bleu Player
+
+  // Blue Player
   ctx.fillStyle = "blue";
   ctx.fillRect(playerX, playerY, 50, 50);
 
   requestAnimationFrame(draw);
 }
+
+// Start the game loop
+draw();
