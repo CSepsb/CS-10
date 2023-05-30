@@ -1,5 +1,5 @@
-// Mad Lib
-document.getElementById("btn").addEventListener("click", btnClicked);
+// Mad lib
+document.getElementById("btn"), addEventListener("click", btnClicked);
 
 function btnClicked() {
   // Input
@@ -9,7 +9,6 @@ function btnClicked() {
 
   // Procces
   let message = `My ${family} loves to eat ${noun} and then ${action}.`;
-
-  //   Output
+  // Output
   document.getElementById("output").innerHTML = message;
 }
