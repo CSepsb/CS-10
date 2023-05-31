@@ -1,55 +1,61 @@
 // Variables
-let playerX = 175;
-let playerY = 350;
-let keys = {};
+let playerX = 200;
+let playerY = 300;
+let rightPressed = false;
+let leftPressed = false;
+let upPressed = false;
+let downPressed = false;
+let WallLeft = 325;
+let WallRight = 375;
+let WallTop = 250;
+let WallBottom = 500;
 
 // WASD
-document.addEventListener("keydown", keyDownHandler);
-document.addEventListener("keyup", keyUpHandler);
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
 
 function keyDownHandler(event) {
-  keys[event.keyCode] = true;
+  if (event.keyCode === 68) {
+    rightPressed = true;
+  } else if (event.keyCode === 65) {
+    leftPressed = true;
+  }
+  if (event.keyCode === 83) {
+    downPressed = true;
+  } else if (event.keyCode === 87) {
+    upPressed = true;
+  }
 }
 
 function keyUpHandler(event) {
-  keys[event.keyCode] = false;
+  if (event.keyCode === 68) {
+    rightPressed = false;
+  } else if (event.keyCode === 65) {
+    leftPressed = false;
+  }
+  if (event.keyCode === 83) {
+    downPressed = false;
+  } else if (event.keyCode === 87) {
+    upPressed = false;
+  }
 }
 
 // Move
 function move() {
-  if (keys[68] && playerX < 650) {
+  if (rightPressed === true && playerX < 650) {
     playerX += 3;
-  } else if (keys[65] && playerX > 0) {
+  } else if (leftPressed === true && playerX > 0) {
     playerX -= 3;
   }
 
-  if (keys[83] && playerY < 650) {
+  if (downPressed === true && playerY < 650) {
     playerY += 3;
-  } else if (keys[87] && playerY > 0) {
+  } else if (upPressed === true && playerY > 0) {
     playerY -= 3;
   }
 }
-
-function checkCollision() {
-  // Check collision with the wall for each direction independently
-  if (keys[68] && playerX + 50 > 325 && playerX < 375 && playerY + 50 > 250 && playerY < 500) {
-    playerX = 325 - 50;
-  }
-  if (keys[65] && playerX < 375 && playerX + 50 > 325 && playerY + 50 > 250 && playerY < 500) {
-    playerX = 375;
-  }
-  if (keys[83] && playerY + 50 > 250 && playerY < 500 && playerX + 50 > 325 && playerX < 375) {
-    playerY = 250 - 50;
-  }
-  if (keys[87] && playerY < 500 && playerY + 50 > 250 && playerX + 50 > 325 && playerX < 375) {
-    playerY = 500;
-  }
-  
-  // Additional check for upward collision
-  if (keys[87] && playerY <= 250 && playerX + 50 > 325 && playerX < 375) {
-    playerY = 250;
-  }
-}
+// Collision
+function checkCollision() {}
 
 // Draw
 function draw() {
