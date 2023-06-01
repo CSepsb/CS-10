@@ -1,18 +1,14 @@
 // Variables
-let playerX = 200;
-let playerY = 300;
+let playerX = 175;
+let playerY = 350;
 let rightPressed = false;
 let leftPressed = false;
 let upPressed = false;
 let downPressed = false;
-let WallLeft = 325;
-let WallRight = 375;
-let WallTop = 250;
-let WallBottom = 500;
 
 // WASD
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 
 function keyDownHandler(event) {
   if (event.keyCode === 68) {
@@ -42,20 +38,39 @@ function keyUpHandler(event) {
 
 // Move
 function move() {
-  if (rightPressed === true && playerX < 650) {
+  if (rightPressed && playerX < 650) {
     playerX += 3;
-  } else if (leftPressed === true && playerX > 0) {
+  } else if (leftPressed && playerX > 0) {
     playerX -= 3;
   }
 
-  if (downPressed === true && playerY < 650) {
+  if (downPressed && playerY < 650) {
     playerY += 3;
-  } else if (upPressed === true && playerY > 0) {
+  } else if (upPressed && playerY > 0) {
     playerY -= 3;
   }
 }
-// Collision
-function checkCollision() {}
+
+function checkCollision() {
+  // Check collision with the wall for each direction independently
+  if (rightPressed && playerX + 50 > 325 && playerX < 375 && playerY + 50 > 250 && playerY < 500) {
+    playerX = 325 - 50;
+  }
+  if (leftPressed && playerX < 375 && playerX + 50 > 325 && playerY + 50 > 250 && playerY < 500) {
+    playerX = 375;
+  }
+  if (downPressed && playerY + 50 > 250 && playerY < 500 && playerX + 50 > 325 && playerX < 375) {
+    playerY = 250 - 50;
+  }
+  if (upPressed && playerY < 500 && playerY + 50 > 250 && playerX + 50 > 325 && playerX < 375) {
+    playerY = 500;
+  }
+  
+  // Additional check for upward collision
+  if (upPressed && playerY <= 250 && playerX + 50 > 325 && playerX < 375) {
+    playerY = 250;
+  }
+}
 
 // Draw
 function draw() {
