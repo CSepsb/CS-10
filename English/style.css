@@ -21,7 +21,7 @@ body {
 }
 
 #warContainer {
-  margin: 5rem 50px;
+  margin: 3rem 50px;
   margin-bottom: 100px;
   text-align: center;
   position: relative; /* Add relative positioning to the container */
