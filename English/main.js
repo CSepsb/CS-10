@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var currentYear = new Date().getFullYear();
   title.textContent = currentYear;
-  // yearLabel.textContent = "Wars in " + currentYear + ":";
+  yearLabel.textContent = "Wars in " + currentYear + ":";
   warContainer.textContent = getTitle(currentYear);
 
   slider.value = currentYear;
@@ -18,3 +18,18 @@ document.addEventListener("DOMContentLoaded", function () {
     warContainer.textContent = getTitle(year);
   };
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Select the arrow element
+  var arrow = document.querySelector('.arrow');
+
+  // Add a click event listener to the arrow
+  arrow.addEventListener('click', function() {
+    // Scroll to the bottom of the page
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  });
+});
+
