@@ -52,7 +52,7 @@ function move() {
 }
 
 function checkCollision() {
-  // Check collision with the wall for each direction independently
+
   if (rightPressed && playerX + 50 > 325 && playerX < 375 && playerY + 50 > 250 && playerY < 500) {
     playerX = 325 - 50;
   }
@@ -66,7 +66,6 @@ function checkCollision() {
     playerY = 500;
   }
   
-  // Additional check for upward collision
   if (upPressed && playerY <= 250 && playerX + 50 > 325 && playerX < 375) {
     playerY = 250;
   }
