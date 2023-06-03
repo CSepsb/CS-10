@@ -17,10 +17,6 @@ function getTitle(year) {
       wars.push("Trajan's Dacian Wars (101–102, 105–106)");
     }
   
-    if (year >= 224 && year <= 628) {
-      wars.push("Roman–Persian Wars (224–628)");
-    }
-  
     if (year === 383) {
       wars.push("Battle of Fei River (383)");
     }
