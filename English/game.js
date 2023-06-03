@@ -294,7 +294,7 @@ function gameOver() {
 }
 
 function drawWalls() {
-  ctx.fillStyle = "green";
+  ctx.fillStyle = "red";
   ctx.fillRect(wall1.x, wall1.y, wall1.w, wall1.h);
   ctx.fillRect(wall2.x, wall2.y, wall2.w, wall2.h);
   ctx.fillRect(wall3.x, wall3.y, wall3.w, wall3.h);

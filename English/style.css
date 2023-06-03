@@ -9,7 +9,7 @@ body {
 }
 
 #title {
-  font-size: 8vw;
+  font-size: 7vw;
   text-align: center;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 #warContainer {
-  margin: 3rem 50px;
+  margin: 5rem 50px;
   margin-bottom: 100px;
   text-align: center;
   position: relative; /* Add relative positioning to the container */
