@@ -51,6 +51,18 @@ function draw() {
     orangeX = newPosition.x;
     orangeY = newPosition.y;
   }
+  // Boundaries
+  if (mouseX >= cnv.width - blueRadius) {
+    mouseX = cnv.width - blueRadius;
+  } else if (mouseX <= 0 + blueRadius) {
+    mouseX = 0 + blueRadius;
+  }
+
+  if (mouseY >= cnv.height - blueRadius) {
+    mouseY = cnv.height - blueRadius;
+  } else if (mouseY <= 0 + blueRadius) {
+    mouseY = 0 + blueRadius;
+  }
 
   // Request the next animation frame
   requestAnimationFrame(draw);

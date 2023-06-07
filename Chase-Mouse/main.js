@@ -1,6 +1,9 @@
 // Variables
 let playerX = 350;
 let playerY = 350;
+let mouseX = 0;
+let mouseY = 0;
+let radius = 35;
 
 // Draw
 function draw() {
@@ -11,26 +14,59 @@ function draw() {
   cnv.height = 700;
 
   // Boundaries
-  if (playerX >= 650) {
-    playerX = 650;
-  } else if (playerX <= 0) {
-    playerX = 0;
+  if (mouseX >= cnv.width) {
+    mouseX = cnv.width;
+  } else if (mouseX <= 0 + radius + 200) {
+    mouseX = 0 + radius + 200;
+  }
+  if (mouseY >= cnv.height - radius - 100) {
+    mouseY = cnv.height - radius - 100;
+  } else if (mouseY <= 0) {
+    mouseY = 0;
   }
 
-  if (playerY >= 650) {
-    playerY = 650;
-  } else if (playerY <= 0) {
-    playerY = 0;
-  }
+  // Line Horizontal
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = "red";
+  ctx.beginPath();
+  ctx.moveTo(mouseX, mouseY);
+  ctx.lineTo(mouseX - 100, mouseY);
+  ctx.stroke();
+
+  // Line Diagonal
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = "red";
+  ctx.beginPath();
+  ctx.moveTo(mouseX - 200, mouseY + 100);
+  ctx.lineTo(mouseX - 100, mouseY);
+  ctx.stroke();
 
   // Blue Player
   ctx.fillStyle = "blue";
   ctx.beginPath();
-  ctx.arc(playerX, playerY, 35, 0, 2 * Math.PI, true);
+  ctx.arc(mouseX - 200, mouseY + 100, radius, 0, 2 * Math.PI, true);
   ctx.fill();
 
   requestAnimationFrame(draw);
+
+  // Track Mouse
+  cnv.addEventListener("mousemove", function (event) {
+    let rect = cnv.getBoundingClientRect();
+    mouseX = event.clientX - rect.left;
+    mouseY = event.clientY - rect.top;
+  });
 }
 
-// Start the game loop
 draw();
+
+//  if (mouseX >= 650 + radius * 0.45) {
+//   mouseX = 650 + radius * 0.45;
+// } else if (mouseX <= 0 + radius) {
+//   mouseX = 0 + radius;
+// }
+
+// if (mouseY >= 650 + radius * 0.45) {
+//   mouseY = 650 + radius * 0.45;
+// } else if (mouseY <= 0 + radius) {
+//   mouseY = 0 + radius;
+// }
