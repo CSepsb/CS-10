@@ -60,7 +60,7 @@ function draw() {
   let distanceCircle = Math.sqrt(cx * cx + cy * cy);
 
   if (distanceCircle < radius) {
-    const circlePos = getRandomPositionCircle();
+    let circlePos = getRandomPositionCircle();
     circleX = circlePos.x;
     circleY = circlePos.y;
   }
@@ -72,7 +72,7 @@ function draw() {
     mouseY > rectangleY &&
     mouseY < rectangleY + rectangleHeight
   ) {
-    const rectPos = getRandomPositionRectangle();
+    let rectPos = getRandomPositionRectangle();
     rectangleX = rectPos.x;
     rectangleY = rectPos.y;
   }
