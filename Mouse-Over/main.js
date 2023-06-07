@@ -22,22 +22,21 @@ function getRandomPositionCircle() {
   let minY = radius;
   let maxY = cnv.height - radius;
 
-  let x = Math.random() * (maxX - minX) + minX;
-  let y = Math.random() * (maxY - minY) + minY;
+  let newCircleX = Math.random() * (maxX - minX) + minX;
+  let newCircleY = Math.random() * (maxY - minY) + minY;
 
-  return { x, y };
+  return { x: newCircleX, y: newCircleY };
 }
+
 // Teleport Rectangle
 function getRandomPositionRectangle() {
-  let minX = rectangleX;
   let maxX = cnv.width - rectangleWidth;
-  let minY = rectangleY;
   let maxY = cnv.height - rectangleHeight;
 
-  let x = Math.random() * (maxX - minX);
-  let y = Math.random() * (maxY - minY);
+  let newRectangleX = Math.random() * maxX;
+  let newRectangleY = Math.random() * maxY;
 
-  return { x, y };
+  return { x: newRectangleX, y: newRectangleY };
 }
 
 function draw() {
@@ -53,16 +52,19 @@ function draw() {
   ctx.beginPath();
   ctx.arc(circleX, circleY, radius, 0, 2 * Math.PI);
   ctx.fill();
+
   // Circle collision
   let cx = circleX - mouseX;
   let cy = circleY - mouseY;
 
   let distanceCircle = Math.sqrt(cx * cx + cy * cy);
+
   if (distanceCircle < radius) {
-    let newCircle = getRandomPositionCircle();
-    circleX = newCircle.x;
-    circleY = newCircle.y;
+    const circlePos = getRandomPositionCircle();
+    circleX = circlePos.x;
+    circleY = circlePos.y;
   }
+
   // Rectangle collision
   if (
     mouseX > rectangleX &&
@@ -70,16 +72,18 @@ function draw() {
     mouseY > rectangleY &&
     mouseY < rectangleY + rectangleHeight
   ) {
-    let newRectangle = getRandomPositionRectangle();
-    rectangleX = newRectangle.x;
-    rectangleY = newRectangle.y;
+    const rectPos = getRandomPositionRectangle();
+    rectangleX = rectPos.x;
+    rectangleY = rectPos.y;
   }
 
   requestAnimationFrame(draw);
 }
+
 cnv.addEventListener("mousemove", function (event) {
   let rect = cnv.getBoundingClientRect();
   mouseX = event.clientX - rect.left;
   mouseY = event.clientY - rect.top;
 });
+
 requestAnimationFrame(draw);

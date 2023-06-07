@@ -3,7 +3,7 @@ let playerX = 350;
 let playerY = 350;
 let mouseX = 0;
 let mouseY = 0;
-let radius = 35;
+let radius = 25;
 
 // Draw
 function draw() {
