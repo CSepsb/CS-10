@@ -58,15 +58,3 @@ function draw() {
 }
 
 draw();
-
-//  if (mouseX >= 650 + radius * 0.45) {
-//   mouseX = 650 + radius * 0.45;
-// } else if (mouseX <= 0 + radius) {
-//   mouseX = 0 + radius;
-// }
-
-// if (mouseY >= 650 + radius * 0.45) {
-//   mouseY = 650 + radius * 0.45;
-// } else if (mouseY <= 0 + radius) {
-//   mouseY = 0 + radius;
-// }
