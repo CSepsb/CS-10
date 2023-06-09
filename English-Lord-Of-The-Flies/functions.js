@@ -154,7 +154,7 @@ function gameOver() {
   death.play();
   state = "gameover";
   if (distance > best) {
-    best = distance;
+    best = distance + 1;
   }
   setTimeout(reset, 1500);
 }
