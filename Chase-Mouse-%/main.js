@@ -28,10 +28,10 @@ function draw() {
   // Distance
   let dx = mouseX - playerX;
   let dy = mouseY - playerY;
-  let distance = Math.sqrt(dx * dx + dy * dy);
+  let distance = dx * dx + dy * dy;
+  let speed = baseSpeed * (distance / cnv.width, 0.5);
 
-  // Calculate speed based on distance
-  let speed = baseSpeed * (1 - distance / cnv.width);
+  // Update player position
   playerX += dx * speed;
   playerY += dy * speed;
 

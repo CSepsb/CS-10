@@ -4,7 +4,7 @@ let playerY = 350;
 let mouseX = 0;
 let mouseY = 0;
 let radius = 25;
-let baseSpeed = 0.1;
+let speed = 0.1;
 
 function draw() {
   // Canvas
@@ -28,10 +28,6 @@ function draw() {
   // Distance
   let dx = mouseX - playerX;
   let dy = mouseY - playerY;
-  let distance = Math.sqrt(dx * dx + dy * dy);
-
-  // Calculate speed based on distance
-  let speed = baseSpeed * (1 - distance / cnv.width);
   playerX += dx * speed;
   playerY += dy * speed;
 

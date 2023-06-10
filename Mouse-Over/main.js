@@ -16,27 +16,23 @@ let rectangleWidth = 150;
 let rectangleHeight = 50;
 
 // Teleport circle
-function getRandomPositionCircle() {
+function teleportCircle() {
   let minX = radius;
   let maxX = cnv.width - radius;
   let minY = radius;
   let maxY = cnv.height - radius;
 
-  let newCircleX = Math.random() * (maxX - minX) + minX;
-  let newCircleY = Math.random() * (maxY - minY) + minY;
-
-  return { x: newCircleX, y: newCircleY };
+  circleX = Math.random() * (maxX - minX) + minX;
+  circleY = Math.random() * (maxY - minY) + minY;
 }
 
 // Teleport Rectangle
-function getRandomPositionRectangle() {
+function teleportRectangle() {
   let maxX = cnv.width - rectangleWidth;
   let maxY = cnv.height - rectangleHeight;
 
-  let newRectangleX = Math.random() * maxX;
-  let newRectangleY = Math.random() * maxY;
-
-  return { x: newRectangleX, y: newRectangleY };
+  rectangleX = Math.random() * maxX;
+  rectangleY = Math.random() * maxY;
 }
 
 function draw() {
@@ -60,9 +56,7 @@ function draw() {
   let distanceCircle = Math.sqrt(cx * cx + cy * cy);
 
   if (distanceCircle < radius) {
-    let circlePos = getRandomPositionCircle();
-    circleX = circlePos.x;
-    circleY = circlePos.y;
+    teleportCircle();
   }
 
   // Rectangle collision
@@ -72,9 +66,7 @@ function draw() {
     mouseY > rectangleY &&
     mouseY < rectangleY + rectangleHeight
   ) {
-    let rectPos = getRandomPositionRectangle();
-    rectangleX = rectPos.x;
-    rectangleY = rectPos.y;
+    teleportRectangle();
   }
 
   requestAnimationFrame(draw);
