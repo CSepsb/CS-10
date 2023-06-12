@@ -1,72 +1,97 @@
 // Variables
 let playerX = 175;
 let playerY = 350;
-let rightPressed = false;
-let leftPressed = false;
-let upPressed = false;
-let downPressed = false;
+let W = false;
+let A = false;
+let S = false;
+let D = false;
 
 // WASD
 document.addEventListener("keydown", keyDownHandler);
 document.addEventListener("keyup", keyUpHandler);
 
 function keyDownHandler(event) {
-  if (event.keyCode === 68) {
-    rightPressed = true;
+  if (event.keyCode === 87) {
+    W = true;
   } else if (event.keyCode === 65) {
-    leftPressed = true;
+    A = true;
   }
   if (event.keyCode === 83) {
-    downPressed = true;
-  } else if (event.keyCode === 87) {
-    upPressed = true;
+    S = true;
+  }
+  if (event.keyCode === 68) {
+    D = true;
   }
 }
 
 function keyUpHandler(event) {
   if (event.keyCode === 68) {
-    rightPressed = false;
+    D = false;
   } else if (event.keyCode === 65) {
-    leftPressed = false;
+    A = false;
   }
   if (event.keyCode === 83) {
-    downPressed = false;
+    S = false;
   } else if (event.keyCode === 87) {
-    upPressed = false;
+    W = false;
   }
 }
 
 // Move
 function move() {
-  if (rightPressed && playerX < 650) {
+  if (D && playerX < 650) {
     playerX += 3;
-  } else if (leftPressed && playerX > 0) {
+  } else if (A && playerX > 0) {
     playerX -= 3;
   }
 
-  if (downPressed && playerY < 650) {
+  if (S && playerY < 650) {
     playerY += 3;
-  } else if (upPressed && playerY > 0) {
+  } else if (W && playerY > 0) {
     playerY -= 3;
   }
 }
 
 function checkCollision() {
-
-  if (rightPressed && playerX + 50 > 325 && playerX < 375 && playerY + 50 > 250 && playerY < 500) {
-    playerX = 325 - 50;
-  }
-  if (leftPressed && playerX < 375 && playerX + 50 > 325 && playerY + 50 > 250 && playerY < 500) {
-    playerX = 375;
-  }
-  if (downPressed && playerY + 50 > 250 && playerY < 500 && playerX + 50 > 325 && playerX < 375) {
-    playerY = 250 - 50;
-  }
-  if (upPressed && playerY < 500 && playerY + 50 > 250 && playerX + 50 > 325 && playerX < 375) {
+  if (
+    W &&
+    playerY < 500 &&
+    playerY + 50 > 250 &&
+    playerX + 50 > 325 &&
+    playerX < 375
+  ) {
     playerY = 500;
   }
-  
-  if (upPressed && playerY <= 250 && playerX + 50 > 325 && playerX < 375) {
+
+  if (
+    A &&
+    playerX < 375 &&
+    playerX + 50 > 325 &&
+    playerY + 50 > 250 &&
+    playerY < 500
+  ) {
+    playerX = 375;
+  }
+  if (
+    S &&
+    playerY + 50 > 250 &&
+    playerY < 500 &&
+    playerX + 50 > 325 &&
+    playerX < 375
+  ) {
+    playerY = 250 - 50;
+  }
+  if (
+    D &&
+    playerX + 50 > 325 &&
+    playerX < 375 &&
+    playerY + 50 > 250 &&
+    playerY < 500
+  ) {
+    playerX = 325 - 50;
+  }
+
+  if (W && playerY <= 250 && playerX + 50 > 325 && playerX < 375) {
     playerY = 250;
   }
 }
