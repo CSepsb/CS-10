@@ -10,7 +10,7 @@ let sunx = 0.5 * cnv.width;
 let suny = 0.77 * cnv.height;
 let suns = 30;
 
-requestAnimationFrame(animate);
+animate();
 
 function animate() {
   // clear the canvas
@@ -19,10 +19,6 @@ function animate() {
   cloud1x--;
   cloud2x++;
 
-  suny--;
-
-  suns += 0.05;
-
   // sky
   ctx.fillStyle = "#3131e7";
   ctx.fillRect(0, 0, cnv.width, cnv.height);
@@ -30,7 +26,15 @@ function animate() {
   // sun
   ctx.beginPath();
   ctx.arc(sunx, suny, suns, 0, 2 * Math.PI);
-  ctx.fillStyle = '#e60000';
+
+  if (suny >= 150 && suns <= 60) {
+    suny--;
+    suns += 0.1;
+    ctx.fillStyle = "#e60000";
+  } else {
+    ctx.fillStyle = "#ffff00";
+  }
+
   ctx.fill();
 
   // grass
@@ -42,6 +46,6 @@ function animate() {
   ctx.drawImage(htmlImg, cloud1x, cloud1y);
   ctx.drawImage(htmlImg, cloud2x, cloud2y);
 
-    // LOOP
-    requestAnimationFrame(animate);
-  }
+  // LOOP
+  requestAnimationFrame(animate);
+}
