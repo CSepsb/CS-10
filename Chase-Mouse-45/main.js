@@ -16,15 +16,13 @@ function move() {
   // Player movement
   let dx = mouseX - playerX;
   let dy = mouseY - playerY;
+  let distance = Math.sqrt(dx ** 2 + dy ** 2);
+  let angle = Math.atan2(dy, dx);
 
-  if (Math.abs(dx) > Math.abs(dy)) {
-    // Move horizontally
-    playerX += dx * speed;
-    playerY = mouseY;
-  } else {
-    // Move vertically
-    playerY += dy * speed;
-    playerX = mouseX;
+  if (playerX !== mouseX || playerY !== mouseY) {
+    // Diagonal
+    playerX += Math.cos(angle) * distance * speed;
+    playerY += Math.sin(angle) * distance * speed;
   }
 
   // Boundaries
@@ -33,6 +31,7 @@ function move() {
   } else if (playerX <= 0 + radius) {
     playerX = 0 + radius;
   }
+
   if (playerY >= cnv.height - radius) {
     playerY = cnv.height - radius;
   } else if (playerY <= 0 + radius) {
