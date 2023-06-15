@@ -31,7 +31,7 @@ function draw() {
   let distance = dx * dx + dy * dy;
   let speed = baseSpeed * (distance / cnv.width, 0.5);
 
-  // Update player position
+  // Update position
   playerX += dx * speed;
   playerY += dy * speed;
 

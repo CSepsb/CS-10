@@ -13,16 +13,19 @@ cnv.width = 700;
 cnv.height = 700;
 
 function move() {
-  // Player movement
-  let dx = mouseX - playerX;
-  let dy = mouseY - playerY;
-  let distance = Math.sqrt(dx ** 2 + dy ** 2);
-  let angle = Math.atan2(dy, dx);
-
-  if (playerX !== mouseX || playerY !== mouseY) {
-    // Diagonal
-    playerX += Math.cos(angle) * distance * speed;
-    playerY += Math.sin(angle) * distance * speed;
+  if (playerY > mouseY && playerX > mouseX) {
+    playerY--;
+    playerX++;
+  } else if (playerY < mouseY && playerX < mouseX) {
+    playerY++;
+    playerX--;
+  } else if (playerY == mouseY) {
+    // allow diagonal movement
+    if (playerY > mouseX) {
+      playerX--;
+    } else if (playerY < mouseX) {
+      playerX--;
+    } else if 
   }
 
   // Boundaries
