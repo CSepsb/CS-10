@@ -189,7 +189,7 @@ function drawMainComponents() {
   ctx.fillText("DISTANCE: " + Math.floor(distance), 25, cnv.height - 15);
   ctx.fillText("BEST: " + Math.floor(best), cnv.width - 250, cnv.height - 15);
 
-  // Update and draw the blood drops
+  // Update and draw blood
   for (let i = 0; i < bloodDrops.length; i++) {
     const drop = bloodDrops[i];
     drop.y += drop.speed;
